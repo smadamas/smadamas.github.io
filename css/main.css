@@ -111,6 +111,26 @@
     height: 100%;
   }
 
+  .marquee{
+    width: 800px;
+    height: 150px;
+    overflow: hidden;
+  }
+
+  .marquee-content{
+    display: flex;
+    list-style: none;
+  }
+
+  .marquee-image{
+    max-height: 150px;
+  }
+
+  @keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translatex(-1000px); }
+  }
+
   .headerimage{
     max-width: 100%;
     opacity: 0.4;
