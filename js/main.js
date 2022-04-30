@@ -1,9 +1,10 @@
-window.onload = function() {
+/*window.onload = function() {
     calcScrollLength();
-  };
+  };*/
 
 function calcScrollLength() {
     var sum = 0;
+    app.use("..", express.static('..'));
 
     console.log("Calcing scroll length...");
 
