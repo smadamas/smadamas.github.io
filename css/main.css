@@ -112,23 +112,31 @@
   }
 
   .marquee{
-    width: 800px;
-    height: 150px;
+    height: 250px;
     overflow: hidden;
+    margin-left: 2%;
+    margin-right: 2%;
   }
 
   .marquee-content{
     display: flex;
     list-style: none;
+    animation: scrolling 80s linear infinite;
+  }
+
+  .marquee-item{
+    height: 250px;
+    width: 250px;
+    flex-shrink: 0;
   }
 
   .marquee-image{
-    max-height: 150px;
+    height: 100%;
   }
 
   @keyframes scrolling {
     0% { transform: translateX(0); }
-    100% { transform: translatex(-1000px); }
+    100% { transform: translatex(-2250px); }
   }
 
   .headerimage{
