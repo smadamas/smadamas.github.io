@@ -1,25 +1,40 @@
-/*window.onload = function() {
-    calcScrollLength();
-  };*/
+window.onload = function() {
+    randomizeQuotes();
+  };
+window.setInterval(function() {
+    randomizeQuotes();
+}, 10000);
 
-function calcScrollLength() {
-    var sum = 0;
-    app.use("..", express.static('..'));
+const quotes = ["\"I want to help keep the world beautiful\"", 
+        "\"I want to make a good life possible for everyone\"", 
+        "\"I want to use technology and science as\n a solution for sustainability\"", 
+        "\"I want to help build projects that\n improve the world\"",
+        "\"I want to apply nature to\n complex systems and problems\"",
+        "\"I want to contribute to a bright future\"",
+        "\"I want to learn analytical and creative skills\"",
+        "\"I want to disrupt the status quo\"",
+        "\"I want to redesign outdated processes and systems\"",
+        "\"I want to work with positive\n and open-minded people\"",
+        "\"I want to maximize my impact on the world\""
+        ];
 
-    console.log("Calcing scroll length...");
+const spacing = ["15%", "31%", "58%", "75%", "18%", "45%", "68%", "85%"];
 
-    require(['fs','image-size'], function runCalculations(){
-        const dir = "../img/carousel"
-        const files = fs.readdirSync(dir)
+function randomizeQuotes() {
 
-        for (const file of files) {
-            sizeOf(file, function (err, dimensions) {
-                sum += (dimensions.width/(dimensions.height/250))
-            });
-        }
-        console.log(sum);
-    });
+    var whichQuote = (Math.floor(Math.random() * 11))
+    var whichPosition = (Math.floor(Math.random() * 8))
 
-    
-    console.log("Done!");
+    document.getElementById("quote").innerHTML = quotes[whichQuote];
+
+    if (whichPosition >= 4){
+        document.getElementById("floated-quotes").style.right = "2%";
+        document.getElementById("floated-quotes").style.textAlign = "right";
+    }
+    else {
+        document.getElementById("floated-quotes").style.left = "2%";
+        document.getElementById("floated-quotes").style.textAlign = "left";
+    }
+
+    document.getElementById("floated-quotes").style.top = spacing[whichPosition];
 }

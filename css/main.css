@@ -115,6 +115,37 @@
     height: 100%;
   }
 
+  .floated-quotes{
+    position: absolute;
+    text-align: left;
+    animation: quotes 10s linear infinite;
+  }
+
+  .floated-quotes p{
+    font-size: 2rem;
+    color: black;
+    white-space: pre-line;
+  }
+
+  @keyframes quotes{
+    0% { opacity: 0; }
+    10% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    90% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+
+  .headerimage{
+    max-width: 100%;
+    opacity: 0.4;
+  }
+
+  .container{
+    position: relative;
+    width: 100%;
+  }
+
   .marquee{
     height: 250px;
     overflow: hidden;
@@ -141,11 +172,6 @@
   @keyframes scrolling {
     0% { transform: translateX(0); }
     100% { transform: translatex(-2040px); }
-  }
-
-  .headerimage{
-    max-width: 100%;
-    opacity: 0.4;
   }
 
   body{
