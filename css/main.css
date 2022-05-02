@@ -71,8 +71,8 @@
     border-top: 1px solid rgba(255,255,255,0.05);
   }    
   
-  .wrapper .sidebar ul li a{
-    color: #b0ffc5;
+  .wrapper .sidebar ul a, .wrapper .sidebar ul a:link, .wrapper .sidebar ul a:visited{
+    color: #b0ffc5 !important;
     display: block;
   }
   
@@ -120,17 +120,17 @@
     overflow: hidden;
     margin-left: 2%;
     margin-right: 2%;
+    margin-bottom: 3%;
   }
 
   .marquee-content{
     display: flex;
     list-style: none;
-    animation: scrolling 80s linear infinite;
+    animation: scrolling 70s linear infinite;
   }
 
   .marquee-item{
     height: 250px;
-    width: 250px;
     flex-shrink: 0;
   }
 
@@ -140,7 +140,7 @@
 
   @keyframes scrolling {
     0% { transform: translateX(0); }
-    100% { transform: translatex(-2250px); }
+    100% { transform: translatex(-2040px); }
   }
 
   .headerimage{
@@ -277,6 +277,10 @@
   #skills-content{
     display: flex;
     flex-direction: column;
+  }
+
+  #skills-content a{
+    color: black;
   }
 
   #skills-content > div:not(:first-child){
