@@ -142,6 +142,11 @@
     width: 100%;
   }
 
+  #aboutme .social_media{
+    position: relative;
+    display: none;
+  }
+
   .marquee{
     height: 250px;
     overflow: hidden;
@@ -344,7 +349,8 @@
 
 @media (max-width: 50em) {
   .wrapper {
-    display: none;
+    display: block;
+    position: relative;
   }
 
   main.scroll-section {
@@ -363,6 +369,48 @@
     max-height: 240px;
     margin: 15%;
     margin-right: none;
+  }
+
+  .wrapper .sidebar{
+    width: 100%;
+    height: 150px;
+    padding: none;
+    position: relative;
+    margin-top: 0px;
+  }
+
+  .wrapper .sidebar ul{
+    display: none;
+  }
+
+  .wrapper .sidebar .social_media{
+    display: none;
+  }
+
+  #aboutme .social_media{
+    display: flex;
+    margin: 2%;
+  }
+
+  #aboutme .section-label{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .social_media a{
+    display: block;
+    width: 40px;
+    background: #05612A;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    margin: 0 5px;
+    color: #b0ffc5;
+    border-radius: 5px;
+  }
+
+  .section-label h2{
+    margin-left: 30px;
   }
 }
 
