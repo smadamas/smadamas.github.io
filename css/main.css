@@ -354,6 +354,16 @@
   .floated-quotes p{
     font-size: 1.5rem;
   }
+
+  .card-small .row {
+    flex-direction: column;
+  }
+  
+  .card-small img{
+    max-height: 240px;
+    margin: 15%;
+    margin-right: none;
+  }
 }
 
 @media (max-width: 60em) {
