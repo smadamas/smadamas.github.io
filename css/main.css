@@ -252,7 +252,7 @@
   @media (max-width: 600px) {
     html { font-size: 12px; }
     :root {
-      --marquee-width: 100vw;
+      --marquee-width: 95vw;
       --marquee-height: 16vh;
       --marquee-elements-displayed: 3;
     }
@@ -469,11 +469,16 @@
 @media (max-width: 35em) {
   .headerimage {
     max-width: 100%;
+    position: static;
   }
 
   .container {
-    max-height: 50vh;
+    height: auto;
   }
+
+  ::-webkit-scrollbar {
+    display: none;
+}
 }
 
 @media (max-width: 50em) {
