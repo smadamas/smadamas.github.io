@@ -14,7 +14,7 @@ window.onload = function() {
 
 window.setInterval(function() {
     randomizeQuotes();
-}, 10000);
+}, 5000);
 
 const quotes = ["\"I want to help keep the world beautiful\"", 
         "\"I want to make a good life possible for everyone\"", 
