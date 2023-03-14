@@ -1,6 +1,17 @@
 window.onload = function() {
+    const root = document.documentElement;
+    const marqueeContent = document.querySelector("#test");
+    const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+    root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+    for(let i=0; i<marqueeElementsDisplayed; i++) {
+        marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+    }
+    console.log(marqueeContent);
+
     randomizeQuotes();
-  };
+};
+
 window.setInterval(function() {
     randomizeQuotes();
 }, 10000);
