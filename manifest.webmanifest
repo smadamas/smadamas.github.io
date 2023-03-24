@@ -1,0 +1,47 @@
+{
+    "icons": [
+      {
+          "src": "img/icons/maskable_icon.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "maskable"
+      },
+      {
+        "src": "img/icons/512Icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "img/icons/384Icon.png",
+        "sizes": "384x384",
+        "type": "image/png"
+      },
+      {
+        "src": "img/icons/256Icon.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      },
+      {
+        "src": "img/icons/192Icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "img/icons/128Icon.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      },
+      {
+        "src": "img/icons/96Icon.png",
+        "sizes": "96x96",
+        "type": "image/png"
+      }
+    ],
+    "name": "Samuel Adams",
+    "short_name": "samadams_portfolio",
+    "lang": "en-US",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "theme_color": "#FFFFFF",
+    "background_color": "#FFFFFF"
+  }
