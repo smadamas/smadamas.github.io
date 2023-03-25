@@ -277,18 +277,19 @@
   }
 
   .grid-container{
-    display: grid;
-    row-gap: 40px;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-    grid-auto-flow: row;
-    justify-items: center;
-    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
  }
 
   .grid-item{
-    display: flex;
-    flex-direction: column;
     text-align: center;
+  }
+
+  .grid-item img {
+    display: block;
+    max-width: 100%;
   }
 
   .card-small .row {
@@ -580,7 +581,9 @@
   }
 
   .grid-item .img{
-    /*min-width: 200;*/
+    align-self: center;
+    object-fit: cover;
+    width: 100px;
   }
 
 }
