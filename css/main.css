@@ -286,6 +286,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 10px;
  }
 
   .grid-item{
@@ -582,6 +583,10 @@
 
   .card-small {
     width: 90%;
+  }
+
+  .grid-container {
+    gap: 30px;
   }
 
   .floated-quotes p{
