@@ -26,7 +26,10 @@ const quotes = ["\"I want to help keep the world beautiful\"",
         "\"I want to disrupt the status quo\"",
         "\"I want to redesign outdated processes and systems\"",
         "\"I want to work with positive\n and open-minded people\"",
-        "\"I want to maximize my impact on the world\""
+        "\"I want to maximize my impact on the world\"",
+        "\"I want to embrace new technologies\n that make life simpler\"",
+        "\"I want to work somewhere with an inspiring mission\"",
+        "\"I want to work with a motivated team\""
         ];
 
 const spacing = ["15%", "31%", "58%", "75%", "18%", "45%", "68%", "85%"];
@@ -36,7 +39,7 @@ var prevPosition = 99;
 
 function randomizeQuotes() {
 
-    var whichQuote = (Math.floor(Math.random() * 11))
+    var whichQuote = (Math.floor(Math.random() * quotes.length))
     var whichPosition = (Math.floor(Math.random() * 8))
     while (whichQuote == prevQuoteNum[0] || whichQuote == prevQuoteNum[1]){ //No repeats from previous 2
         whichQuote = (Math.floor(Math.random() * 11))
@@ -44,6 +47,8 @@ function randomizeQuotes() {
     while (whichPosition == prevPosition){ //No repeats from previous position
         whichPosition = (Math.floor(Math.random() * 8))
     }
+    prevQuoteNum[1] = prevQuoteNum[0];
+    prevQuoteNum[0] = whichQuote;
     prevPosition = whichPosition;
 
     document.getElementById("quote").innerHTML = quotes[whichQuote];
